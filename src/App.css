@@ -1,0 +1,19 @@
+.App{
+    background: rgb(255,126,126);
+background: linear-gradient(0deg, rgba(255,126,126,1) 0%, rgba(238,32,77,1) 100%);
+}
+.smallPanel{
+    background-color: rgba(239, 238, 238, 0.877);
+    border-radius: 10px;
+    margin: 10px;
+    padding: 5px;
+
+}
+
+.titleSection{
+    color:white;
+    margin:20px;
+}
+.whiteText{
+    color:white;
+}
