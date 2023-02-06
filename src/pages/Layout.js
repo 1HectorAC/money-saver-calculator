@@ -17,6 +17,13 @@ const Layout = () =>{
                     <li className="nav-item">
                         <NavLink className="nav-link" to="/SaleCalculator">SaleCalculator</NavLink>
                     </li>  
+                    <li className="nav-item">
+                        <NavLink className="nav-link" to="/BuyAmountSale">BuyAmountSale</NavLink>
+                    </li>
+                    <li className="nav-item">
+                        <NavLink className="nav-link" to="/TipCalculator">TipCalculator</NavLink>
+                    </li>
+
                 </ul>
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <li><NavLink className="nav-link dropdown-item" to="/" >Home</NavLink></li>
