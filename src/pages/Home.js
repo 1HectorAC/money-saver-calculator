@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 const Home = () => {
     return (
         <div className="text-center container">
@@ -9,29 +11,28 @@ const Home = () => {
             <div className="row">
                 <div className="col-md-4">
                     <div className="smallPanel">
-                        <h3>Test Title</h3>
+                        <h4>Sale Calculator</h4>
                         <hr />
-                        <p>Description Added here later.</p>
+                        <p>Calculate the savings of a percentage off sale. <NavLink to="/SaleCalculator">Click Here.</NavLink></p>
                     </div>
 
                 </div>
                 <div className="col-md-4">
                     <div className="smallPanel">
-                        <h3>Test Title</h3>
+                        <h4>Buy Amount Sale</h4>
                         <hr />
-                        <p>Description Added here later.</p>
+                        <p>Calculate savings of a "buy 2 get 1 free" sale. <NavLink to="/BuyAmountSale">Click Here.</NavLink></p>
                     </div>
                 </div>
                 <div className="col-md-4">
                     <div className="smallPanel">
-                        <h3>Test Title</h3>
+                        <h4>Tip Calculator</h4>
                         <hr />
-                        <p>Description Added here later.</p>
+                        <p>Calculate the cost of an item with a tip. <NavLink to="/TipCalculator">Click Here.</NavLink></p>
                     </div>
 
                 </div>
             </div>
-
         </div>
     )
 };
