@@ -1,4 +1,17 @@
 import { Outlet, NavLink } from "react-router-dom";
+
+const NavItem = (props) => {
+    return (
+        <li className="nav-item"><NavLink className="nav-link" to={props.link}>{props.linkName}</NavLink></li>
+    )
+};
+
+const DropdownNavItem = (props) => {
+    return (
+        <li><NavLink className="nav-link dropdown-item" to={props.link} >{props.linkName}</NavLink></li>
+    )
+}
+
 const Layout = () => {
     return (
         <>
@@ -11,22 +24,15 @@ const Layout = () => {
                     </button>
                     <div className="collapse navbar-collapse justify-content-between" id="navbarNavDropdown">
                         <ul className="navbar-nav me-auto">
-                            <li className="nav-item">
-                                <NavLink className="nav-link" to="/SaleCalculator">SaleCalculator</NavLink>
-                            </li>
-                            <li className="nav-item">
-                                <NavLink className="nav-link" to="/BuyAmountSale">BuyAmountSale</NavLink>
-                            </li>
-                            <li className="nav-item">
-                                <NavLink className="nav-link" to="/TipCalculator">TipCalculator</NavLink>
-                            </li>
-
+                            <NavItem link="/SaleCalculator" linkName="SaleCalculator" />
+                            <NavItem link="/BuyAmountSale" linkName="BuyAmountSale" />
+                            <NavItem link="/TipCalculator" linkName="TipCalculator" />
                         </ul>
                         <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><NavLink className="nav-link dropdown-item" to="/" >Home</NavLink></li>
-                            <li><NavLink className="nav-link dropdown-item" to="/SaleCalculator" >SaleCalculator</NavLink></li>
-                            <li><NavLink className="nav-link dropdown-item" to="/BuyAmountSale" >BuyAmountSale</NavLink></li>
-                            <li><NavLink className="nav-link dropdown-item" to="/TipCalculator" >TipCalculator</NavLink></li>
+                            <DropdownNavItem link="/" linkName="Home" />
+                            <DropdownNavItem link="/SaleCalculator" linkName="SaleCalculator" />
+                            <DropdownNavItem link="/BuyAmountSale" linkName="BuyAmountSale" />
+                            <DropdownNavItem link="/TipCalculator" linkName="TipCalculator" />
                         </ul>
                     </div>
                 </div>
