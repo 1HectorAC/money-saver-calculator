@@ -1,36 +1,29 @@
 import { NavLink } from "react-router-dom";
+import TitlePanel from '../components/TitlePanel';
+
+const LinkPanel = (props) => {
+    return (
+        <div className="smallPanel">
+            <h4>{props.title}</h4>
+            <hr />
+            <p>{props.text} <NavLink to={props.link}>Click Here.</NavLink></p>
+        </div>
+    )
+};
 
 const Home = () => {
     return (
         <div className="text-center container">
-            <div className="titleSection">
-                <h1>Money Saver Calculator</h1>
-                <p><i>A website to help you calculate how much your are saving/spending.</i></p>
-                <hr />
-            </div>
+            <TitlePanel titleText="Money Saver Calculator" subText="A website to help you calculate how much your are saving/spending." />
             <div className="row">
                 <div className="col-md-4">
-                    <div className="smallPanel">
-                        <h4>Sale Calculator</h4>
-                        <hr />
-                        <p>Calculate the savings of a percentage off sale. <NavLink to="/SaleCalculator">Click Here.</NavLink></p>
-                    </div>
-
+                    <LinkPanel title="Sale Calculator" text="Calculate the savings of a percentage off sale." link="/SaleCalculator" />
                 </div>
                 <div className="col-md-4">
-                    <div className="smallPanel">
-                        <h4>Buy Amount Sale</h4>
-                        <hr />
-                        <p>Calculate savings of a "buy 2 get 1 free" sale. <NavLink to="/BuyAmountSale">Click Here.</NavLink></p>
-                    </div>
+                    <LinkPanel title="Buy Amount Sale" text='Calculate savings of a "buy 2 get 1 free" sale.' link="/BuyAmountSale" />
                 </div>
                 <div className="col-md-4">
-                    <div className="smallPanel">
-                        <h4>Tip Calculator</h4>
-                        <hr />
-                        <p>Calculate the cost of an item with a tip. <NavLink to="/TipCalculator">Click Here.</NavLink></p>
-                    </div>
-
+                    <LinkPanel title="Tip Calculator" text="Calculate the cost of an item with a tip." link="/TipCalculator" />
                 </div>
             </div>
         </div>
