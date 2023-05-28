@@ -17,3 +17,8 @@ background: linear-gradient(0deg, rgba(255,126,126,1) 0%, rgba(238,32,77,1) 100%
 .whiteText{
     color:white;
 }
+
+.italicText{
+    line-height: .1px;
+    font-style: italic;
+}
